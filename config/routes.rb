@@ -1,4 +1,8 @@
 Benwmiller::Application.routes.draw do
+  get "home/index"
+
+  resources :pokemons
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -50,6 +54,7 @@ Benwmiller::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
+  root :to => 'home#index'
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
